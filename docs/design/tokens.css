@@ -1,0 +1,192 @@
+/* ============================================================
+   BREW & CO — Design Tokens
+   Stack: Next.js 16 · React 19 · Tailwind CSS v4
+   Aesthetic: Artisan Warmth — third-wave coffee culture
+   ============================================================ */
+
+@import "tailwindcss";
+
+/* ── Raw palette ─────────────────────────────────────────── */
+:root {
+  /* Neutrals */
+  --raw-cream:       #FFF8F0;
+  --raw-linen:       #F7EDE2;
+  --raw-parchment:   #EDD9C3;
+  --raw-sand:        #D4BAA0;
+  --raw-stone:       #A8917A;
+  --raw-driftwood:   #7A6050;
+  --raw-mocha:       #4A2E1E;
+  --raw-espresso:    #2B1A0E;
+  --raw-ink:         #150D07;
+
+  /* Accents */
+  --raw-terracotta:  #C84B2E;   /* primary CTA */
+  --raw-rust:        #A33B22;   /* hover/pressed */
+  --raw-caramel:     #E8944A;   /* warm highlight */
+  --raw-honey:       #F2B96E;   /* soft accent */
+  --raw-matcha:      #4F7942;   /* success / matcha category */
+  --raw-teal:        #2A6669;   /* cold drinks category */
+  --raw-blush:       #C96060;   /* pastry / blush accent */
+  --raw-olive:       #6B7C35;   /* olive accent */
+
+  /* Semantic surface */
+  --surface-page:    var(--raw-linen);
+  --surface-card:    var(--raw-cream);
+  --surface-raised:  #FFFFFF;
+  --surface-sunken:  var(--raw-parchment);
+
+  /* Semantic text */
+  --text-primary:    var(--raw-espresso);
+  --text-secondary:  var(--raw-mocha);
+  --text-muted:      var(--raw-stone);
+  --text-inverse:    var(--raw-cream);
+  --text-accent:     var(--raw-terracotta);
+
+  /* Semantic border */
+  --border-subtle:   rgba(43, 26, 14, 0.08);
+  --border-default:  rgba(43, 26, 14, 0.15);
+  --border-strong:   rgba(43, 26, 14, 0.30);
+
+  /* Focus ring */
+  --ring-focus:      rgba(200, 75, 46, 0.40);
+
+  /* ── Spacing ────────────────────────────────────────────── */
+  --space-0:   0px;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+
+  /* ── Border radius ─────────────────────────────────────── */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-2xl:  40px;
+  --radius-full: 9999px;
+
+  /* ── Shadows (warm-tinted) ─────────────────────────────── */
+  --shadow-xs:  0 1px 3px rgba(43, 26, 14, 0.06);
+  --shadow-sm:  0 2px 8px rgba(43, 26, 14, 0.09);
+  --shadow-md:  0 4px 20px rgba(43, 26, 14, 0.12);
+  --shadow-lg:  0 8px 36px rgba(43, 26, 14, 0.14);
+  --shadow-xl:  0 16px 56px rgba(43, 26, 14, 0.18);
+  --shadow-inner: inset 0 2px 8px rgba(43, 26, 14, 0.08);
+
+  /* ── Typography ────────────────────────────────────────── */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans:    "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono:    "DM Mono", "Fira Code", ui-monospace, monospace;
+
+  /* Type scale */
+  --text-xs:    0.75rem;    /* 12px */
+  --text-sm:    0.875rem;   /* 14px */
+  --text-base:  1rem;       /* 16px */
+  --text-lg:    1.125rem;   /* 18px */
+  --text-xl:    1.25rem;    /* 20px */
+  --text-2xl:   1.5rem;     /* 24px */
+  --text-3xl:   1.875rem;   /* 30px */
+  --text-4xl:   2.25rem;    /* 36px */
+  --text-5xl:   3rem;       /* 48px */
+  --text-6xl:   3.75rem;    /* 60px */
+  --text-7xl:   4.5rem;     /* 72px */
+
+  /* Line heights */
+  --leading-none:   1;
+  --leading-tight:  1.25;
+  --leading-snug:   1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed:1.625;
+  --leading-loose:  2;
+
+  /* Letter spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight:   -0.025em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.025em;
+  --tracking-wider:    0.05em;
+  --tracking-widest:   0.12em;
+
+  /* Font weights */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* ── Transitions ───────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast:   120ms;
+  --duration-normal: 200ms;
+  --duration-slow:   350ms;
+
+  /* ── Z-index ───────────────────────────────────────────── */
+  --z-below:   -1;
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-modal:    300;
+  --z-toast:    400;
+  --z-tooltip:  500;
+}
+
+/* ── Tailwind v4 theme mapping ───────────────────────────── */
+@theme {
+  /* Colors → Tailwind utilities (bg-*, text-*, border-*) */
+  --color-cream:       #FFF8F0;
+  --color-linen:       #F7EDE2;
+  --color-parchment:   #EDD9C3;
+  --color-sand:        #D4BAA0;
+  --color-stone:       #A8917A;
+  --color-driftwood:   #7A6050;
+  --color-mocha:       #4A2E1E;
+  --color-espresso:    #2B1A0E;
+  --color-ink:         #150D07;
+  --color-terracotta:  #C84B2E;
+  --color-rust:        #A33B22;
+  --color-caramel:     #E8944A;
+  --color-honey:       #F2B96E;
+  --color-matcha:      #4F7942;
+  --color-teal:        #2A6669;
+  --color-blush:       #C96060;
+  --color-olive:       #6B7C35;
+
+  /* Fonts */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans:    "DM Sans", system-ui, sans-serif;
+  --font-mono:    "DM Mono", ui-monospace, monospace;
+
+  /* Border radius */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-2xl:  40px;
+
+  /* Shadows */
+  --shadow-warm-xs: 0 1px 3px rgba(43, 26, 14, 0.06);
+  --shadow-warm-sm: 0 2px 8px rgba(43, 26, 14, 0.09);
+  --shadow-warm-md: 0 4px 20px rgba(43, 26, 14, 0.12);
+  --shadow-warm-lg: 0 8px 36px rgba(43, 26, 14, 0.14);
+  --shadow-warm-xl: 0 16px 56px rgba(43, 26, 14, 0.18);
+
+  /* Animation */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}

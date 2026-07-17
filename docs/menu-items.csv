@@ -1,0 +1,21 @@
+category,name,description,price,badge
+Bebidas de Espresso,Espresso Clásico,"Doble shot de espresso de origen único, tostado medio oscuro con notas de chocolate amargo y frutos secos",3500,
+Bebidas de Espresso,Cappuccino Artesanal,"Espresso con leche entera vaporizada y espuma densa cremosa, decorado con arte latte",4900,Popular
+Bebidas de Espresso,Caramel Latte,"Espresso doble con leche vaporizada y sirope casero de caramelo tostado. Dulce y envolvente",5500,Popular
+Bebidas de Espresso,Flat White,"Dos ristrettos sobre micro-espuma de leche entera, estilo australiano. Intenso y aterciopelado",5200,Popular
+Bebidas de Espresso,Cortado,"Espresso cortado con igual proporción de leche vaporizada caliente para equilibrar la acidez",4500,
+Bebidas de Espresso,Mocha Intenso,"Espresso con chocolate negro belga fundido, leche vaporizada y crema batida artesanal",5900,Popular
+Bebidas Frías,Cold Brew 18h,"Extracción lenta en frío durante 18 horas. Suave, aterciopelado y naturalmente bajo en acidez",5400,Popular
+Bebidas Frías,Frappuccino de Caramelo,"Espresso frío mezclado con caramelo tostado, hielo picado y crema batida con salsa de caramelo",6900,Popular
+Bebidas Frías,Matcha Latte Frío,"Té matcha ceremonial de Uji batido con leche de avena fría y hielo. Sin azúcar añadida",6400,
+Bebidas Frías,Limonada de Jengibre,"Limonada de prensado frío con jengibre fresco rallado y miel de acacia, servida sobre hielo abundante",4700,
+Bebidas Frías,Toffee Shake,"Batido cremoso de toffee con helado de vainilla artesanal y un shot de espresso frío por encima",7900,Popular
+Bebidas Frías,Chocolate Frío Belga,"Chocolate negro 72% fundido con leche entera, enfriado y servido sobre hielo con crema batida",5400,
+Pasteles,Croissant de Mantequilla,"Hojaldre laminado con mantequilla francesa AOP, horneado cada mañana. Crujiente por fuera y tierno por dentro",3700,Popular
+Pasteles,Muffin de Arándanos,"Muffin esponjoso con arándanos frescos, ralladura de limón y streusel de almendra tostada",3900,
+Pasteles,Tarta de Queso,"Porción de cheesecake cremoso estilo New York con coulis artesanal de frambuesa y frutos rojos",5700,Popular
+Pasteles,Brownie de Chocolate Negro,"Brownie denso de chocolate negro 70% con nueces pecanas tostadas y escamas de flor de sal",4400,Popular
+Pasteles,Cinnamon Roll,"Rollo de canela con glaseado de queso crema. Receta tradicional horneada cada mañana en tienda",4900,Popular
+Sándwiches,Club de Pollo Asado,"Pollo asado a las hierbas provenzales, aguacate, tomate seco y rúcula en chapata artesanal con alioli",9400,Popular
+Sándwiches,Caprese Tostado,"Mozzarella de búfala fresca, tomate heirloom, pesto de albahaca casero en pan sourdough tostado al grill",8700,Popular
+Sándwiches,Pavo Ahumado y Brie,"Pavo ahumado artesanal, queso brie cremoso, mermelada de higos y espinacas baby en focaccia de romero",9600,

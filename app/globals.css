@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
+/* ── Raw custom properties ──────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Neutrals */
+  --cream:       #FFF8F0;
+  --linen:       #F7EDE2;
+  --parchment:   #EDD9C3;
+  --sand:        #D4BAA0;
+  --stone:       #A8917A;
+  --driftwood:   #7A6050;
+  --mocha:       #4A2E1E;
+  --espresso:    #2B1A0E;
+  --ink:         #150D07;
+
+  /* Accents */
+  --terracotta:  #C84B2E;
+  --rust:        #A33B22;
+  --caramel:     #E8944A;
+  --honey:       #F2B96E;
+  --matcha:      #4F7942;
+  --teal:        #2A6669;
+  --blush:       #C96060;
+  --olive:       #6B7C35;
+
+  /* Semantic */
+  --surface-page:   var(--linen);
+  --surface-card:   var(--cream);
+  --text-primary:   var(--espresso);
+  --text-secondary: var(--mocha);
+  --text-muted:     var(--stone);
+  --text-accent:    var(--terracotta);
+
+  /* Shadows */
+  --shadow-warm-xs: 0 1px 3px rgba(43, 26, 14, 0.06);
+  --shadow-warm-sm: 0 2px 8px rgba(43, 26, 14, 0.09);
+  --shadow-warm-md: 0 4px 20px rgba(43, 26, 14, 0.12);
+  --shadow-warm-lg: 0 8px 36px rgba(43, 26, 14, 0.14);
+  --shadow-warm-xl: 0 16px 56px rgba(43, 26, 14, 0.18);
 }
 
+/* ── Tailwind v4 design tokens ──────────────────────────── */
+@theme {
+  /* Colors */
+  --color-cream:       #FFF8F0;
+  --color-linen:       #F7EDE2;
+  --color-parchment:   #EDD9C3;
+  --color-sand:        #D4BAA0;
+  --color-stone:       #A8917A;
+  --color-driftwood:   #7A6050;
+  --color-mocha:       #4A2E1E;
+  --color-espresso:    #2B1A0E;
+  --color-ink:         #150D07;
+  --color-terracotta:  #C84B2E;
+  --color-rust:        #A33B22;
+  --color-caramel:     #E8944A;
+  --color-honey:       #F2B96E;
+  --color-matcha:      #4F7942;
+  --color-teal:        #2A6669;
+  --color-blush:       #C96060;
+  --color-olive:       #6B7C35;
+
+  /* Shadows */
+  --shadow-warm-xs: 0 1px 3px rgba(43, 26, 14, 0.06);
+  --shadow-warm-sm: 0 2px 8px rgba(43, 26, 14, 0.09);
+  --shadow-warm-md: 0 4px 20px rgba(43, 26, 14, 0.12);
+  --shadow-warm-lg: 0 8px 36px rgba(43, 26, 14, 0.14);
+  --shadow-warm-xl: 0 16px 56px rgba(43, 26, 14, 0.18);
+
+  /* Border radius */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-2xl:  40px;
+
+  /* Easing */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Fonts via next/font ────────────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-playfair);
+  --font-sans:    var(--font-dm-sans);
+  --font-mono:    var(--font-dm-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ── Base ───────────────────────────────────────────────── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--linen);
+  color: var(--espresso);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
