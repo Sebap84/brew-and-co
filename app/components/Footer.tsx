@@ -59,8 +59,8 @@ export function Footer() {
               <p>Av. Italia 1234<br />Barrio Italia, Santiago</p>
               <p>
                 <span className="text-cream/40 text-xs uppercase tracking-wide block mb-0.5">Horario</span>
-                Lun – Vie · 7:30 – 21:00<br />
-                Sáb – Dom · 8:00 – 22:00
+                Lun – Vie · 6:00 – 20:00<br />
+                Sáb · 7:00 – 21:00
               </p>
               <p>
                 <a
