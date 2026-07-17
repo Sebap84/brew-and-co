@@ -227,7 +227,7 @@ export default function NosotrosPage() {
           </h2>
           <p className="font-sans text-lg text-cream/70 leading-relaxed">
             Av. Italia 1234, Barrio Italia, Santiago.<br />
-            Lunes a Viernes 7:30 – 21:00 · Fines de semana 8:00 – 22:00
+            Lunes a Viernes 6:00 – 20:00 · Sábados 7:00 – 21:00
           </p>
           <a
             href="https://maps.google.com"
