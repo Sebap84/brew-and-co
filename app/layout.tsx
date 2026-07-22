@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { N8nChat } from "@/app/components/N8nChat";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -49,6 +50,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <N8nChat />
       </body>
     </html>
   );

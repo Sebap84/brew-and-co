@@ -13,7 +13,7 @@ const CATEGORIES: Category[] = [
   {
     id: "todos",
     label: "Ver todo",
-    emoji: "✦",
+    emoji: "✨",
     color: "bg-espresso/8 hover:bg-espresso/15",
     textColor: "text-espresso",
     activeRing: "ring-espresso/40",
@@ -73,7 +73,7 @@ export function CategoryNav({
       className={[
         "flex gap-3",
         isHorizontal
-          ? "flex-row overflow-x-auto pb-1 scrollbar-none"
+          ? "flex-row overflow-x-auto py-2 pl-2 pr-2 scrollbar-none"
           : "flex-col items-center",
         className,
       ].join(" ")}

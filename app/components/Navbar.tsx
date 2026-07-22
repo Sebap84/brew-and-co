@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ReservationModal } from "./ReservationModal";
 
 const NAV_LINKS = [
   { href: "/", label: "Inicio" },
@@ -59,6 +60,11 @@ export function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
+          {/* Reserve button — desktop only */}
+          <div className="hidden md:block">
+            <ReservationModal triggerSize="sm" />
+          </div>
+
           {/* Search */}
           <div className="relative hidden sm:block">
             {searchOpen ? (
@@ -125,6 +131,9 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+          <div className="pt-2">
+            <ReservationModal triggerSize="md" />
+          </div>
         </nav>
       )}
     </header>

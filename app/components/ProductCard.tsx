@@ -54,22 +54,6 @@ export function ProductCard({ item, className = "" }: ProductCardProps) {
           {item.description}
         </p>
 
-        <div className="mt-auto pt-3 flex justify-end">
-          <button
-            aria-label={`Agregar ${item.name} al carrito`}
-            className={[
-              "w-8 h-8 rounded-full bg-espresso text-cream",
-              "flex items-center justify-center",
-              "hover:bg-terracotta active:scale-90",
-              "transition-all duration-200",
-              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta/40",
-            ].join(" ")}
-          >
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-              <path d="M6 1v10M1 6h10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </button>
-        </div>
       </div>
     </article>
   );
