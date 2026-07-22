@@ -93,3 +93,74 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
+
+/* ── n8n Chat — Brew & Co theme ─────────────────────────────
+   The @n8n/chat CDN stylesheet ships its own :root defaults
+   (terracotta→pink #e74266, secondary teal, dark navy #101330,
+   gray-blue #f2f4f8 body). To reliably override them we set the
+   underlying color-* tokens AND every semantic slot to explicit
+   brand hex values, so nothing falls back to an n8n default.
+   This block is the last :root in the file, so it wins on
+   source order against the runtime-injected CDN stylesheet.
+   Variable names verified against
+   node_modules/@n8n/chat/dist/style.css.
+   ──────────────────────────────────────────────────────────── */
+:root {
+  /* Core palette tokens the widget derives everything from */
+  --chat--color--primary:            #C84B2E;   /* terracotta */
+  --chat--color--primary-shade-50:   #b0401f;
+  --chat--color--primary--shade-100: #A33B22;   /* rust */
+  --chat--color--secondary:          #C84B2E;   /* terracotta (user bubble / send) */
+  --chat--color-secondary-shade-50:  #A33B22;   /* rust */
+  --chat--color-white:               #FFF8F0;   /* cream */
+  --chat--color-light:               #F7EDE2;   /* linen */
+  --chat--color-light-shade-50:      #EDD9C3;   /* parchment */
+  --chat--color-light-shade-100:     #D4BAA0;   /* sand (borders) */
+  --chat--color-medium:              #A8917A;   /* stone */
+  --chat--color-dark:                #2B1A0E;   /* espresso */
+  --chat--color-typing:              #A8917A;   /* stone */
+
+  /* Typography — inherit the site's DM Sans */
+  --chat--font-family:               var(--font-dm-sans, var(--font-sans));
+
+  /* Shape */
+  --chat--border-radius:             0.75rem;
+  --chat--window--width:             380px;
+  --chat--window--height:            560px;
+  --chat--window--border-radius:     0.75rem;
+  --chat--message--border-radius:    0.75rem;
+  --chat--input--border-radius:      0.75rem;
+
+  /* Header → espresso bg, cream text */
+  --chat--header--background:        #2B1A0E;
+  --chat--header--color:             #FFF8F0;
+
+  /* Toggle (floating) button → terracotta */
+  --chat--toggle--background:        #C84B2E;
+  --chat--toggle--hover--background: #A33B22;   /* rust */
+  --chat--toggle--active--background:#A33B22;   /* rust */
+  --chat--toggle--color:             #FFF8F0;   /* cream icon */
+  --chat--toggle--size:              56px;
+
+  /* Message bubbles */
+  --chat--message--bot--background:  #FFF8F0;   /* cream */
+  --chat--message--bot--color:       #2B1A0E;   /* espresso */
+  --chat--message--user--background: #C84B2E;   /* terracotta */
+  --chat--message--user--color:      #FFF8F0;   /* cream */
+
+  /* Body / conversation area → linen */
+  --chat--body--background:          #F7EDE2;
+
+  /* Input + footer → cream */
+  --chat--footer--background:        #FFF8F0;
+  --chat--footer--color:             #2B1A0E;
+  --chat--input--background:         #FFF8F0;
+  --chat--input--container--background: #FFF8F0;
+  --chat--input--text-color:         #2B1A0E;
+
+  /* Send button → terracotta */
+  --chat--input--send--button--background:       #FFF8F0;
+  --chat--input--send--button--color:            #C84B2E;   /* terracotta glyph */
+  --chat--input--send--button--background-hover:  #C84B2E;   /* terracotta on hover */
+  --chat--input--send--button--color-hover:       #FFF8F0;   /* cream glyph on hover */
+}

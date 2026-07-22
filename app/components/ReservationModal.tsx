@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { Button } from "./Button";
 
 interface FormState {
@@ -11,9 +12,11 @@ interface FormState {
   time: string;
 }
 
-export function ReservationModal() {
+export function ReservationModal({ triggerSize = "lg" }: { triggerSize?: "sm" | "md" | "lg" }) {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState<"form" | "success">("form");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>({
     name: "",
     phone: "",
@@ -49,12 +52,37 @@ export function ReservationModal() {
 
   function handleClose() {
     setOpen(false);
-    setTimeout(() => setStep("form"), 300);
+    setTimeout(() => {
+      setStep("form");
+      setError(null);
+    }, 300);
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setStep("success");
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/reservations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error ?? "Error al enviar la reserva. Inténtalo de nuevo.");
+        return;
+      }
+
+      setStep("success");
+    } catch {
+      setError("No se pudo conectar con el servidor. Inténtalo de nuevo.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   const today = new Date().toISOString().split("T")[0];
@@ -75,13 +103,7 @@ export function ReservationModal() {
     });
   }
 
-  return (
-    <>
-      <Button variant="secondary" size="lg" onClick={() => setOpen(true)}>
-        Reservar mesa
-      </Button>
-
-      {open && (
+  const modalContent = open ? (
         <div className="fixed inset-0 z-[300] flex items-center justify-center p-4">
           {/* Backdrop */}
           <div
@@ -240,13 +262,20 @@ export function ReservationModal() {
                     </div>
                   </div>
 
+                  {error && (
+                    <p className="font-sans text-sm text-terracotta bg-terracotta/8 border border-terracotta/20 rounded-xl px-4 py-3">
+                      {error}
+                    </p>
+                  )}
+
                   <Button
                     type="submit"
                     variant="primary"
                     size="md"
                     className="mt-2 w-full justify-center"
+                    disabled={loading}
                   >
-                    Confirmar reserva
+                    {loading ? "Enviando…" : "Confirmar reserva"}
                   </Button>
                 </form>
               </>
@@ -284,7 +313,14 @@ export function ReservationModal() {
             )}
           </div>
         </div>
-      )}
+  ) : null;
+
+  return (
+    <>
+      <Button variant="secondary" size={triggerSize} onClick={() => setOpen(true)}>
+        Reservar mesa
+      </Button>
+      {typeof document !== "undefined" && createPortal(modalContent, document.body)}
     </>
   );
 }
